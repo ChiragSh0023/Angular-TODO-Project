@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 47px;
+}
+.container p {
+  padding-top: 10px;
+}
+
+.logout-button {
+  color: darkblue;
+}

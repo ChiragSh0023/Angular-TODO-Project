@@ -1,0 +1,41 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../assets/statingPage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+mat-card-title {
+  margin-top: 10px;
+}
+
+mat-card {
+  width: 30%;
+  border-radius: 8px;
+}
+
+mat-form-field {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+mat-card-content {
+  margin-top: 20px;
+}
+
+.login-button {
+  margin-top: 20px;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+}
+
+input {
+  color: black;
+}

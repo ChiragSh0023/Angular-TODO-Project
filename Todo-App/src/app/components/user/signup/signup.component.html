@@ -1,0 +1,120 @@
+<div class="signup-page">
+  <mat-card>
+    <mat-card-title style="text-align: center">Sign Up</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <input matInput placeholder="Name" formControlName="name" />
+          <mat-error
+            *ngIf="form.get('name').errors && form.get('name').errors?.['required']"
+          >
+            Name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" />
+          <mat-error
+            *ngIf="
+              form.get('email').errors && form.get('email').errors?.['required']
+            "
+          >
+            Email is required
+          </mat-error>
+          <mat-error
+            *ngIf="form.get('email').errors && form.get('email').errors?.['email']"
+          >
+            Enter valid email
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Username"
+            type="text"
+            formControlName="username"
+            pattern="[a-zA-Z].*"
+          />
+          <mat-error
+            *ngIf="
+              form.get('username').errors &&
+              form.get('username').errors?.['required']
+            "
+          >
+            Username is required
+          </mat-error>
+          <mat-error
+            *ngIf="
+              form.get('username').errors && form.get('username').errors?.['pattern']
+            "
+          >
+            Username must start with alphabet!
+          </mat-error>
+          <mat-error
+            *ngIf="
+              form.get('username').errors &&
+              form.get('username').errors?.['minlength']
+            "
+          >
+            Username must be of atleast length 5
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Password"
+            type="password"
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="
+              form.get('password').errors &&
+              form.get('password').errors?.['required']
+            "
+          >
+            Password is required
+          </mat-error>
+          <mat-error
+            *ngIf="
+              form.get('password').errors &&
+              form.get('password').errors?.['minlength']
+            "
+          >
+            Minimum length - 5 characters
+          </mat-error>
+        </mat-form-field>
+
+        <p style="text-align: center; margin-top: 10px">
+          Already have an account.
+          <a mat-button color="primary" routerLink="/login"
+            >Click here to login</a
+          >
+        </p>
+
+        <p style="text-align: center; margin-top: 10px">
+          <mat-error *ngIf="errorMessage">
+            {{ errorMessage }}
+          </mat-error>
+        </p>
+
+        <div *ngIf="successMessage">
+          <p class="success">
+            {{ successMessage }}
+          </p>
+        </div>
+
+        <button
+          type="submit"
+          mat-raised-button
+          color="primary"
+          class="signup-button"
+          [disabled]="form.invalid"
+        >
+          Sign Up
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

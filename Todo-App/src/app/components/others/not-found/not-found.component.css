@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../assets/notFoundBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container img {
+  height: 80vh;
+}
+
+.redirect {
+  z-index: 1;
+  position: relative;
+  top: 122px;
+  right: 282px;
+}
+
+.redirect p {
+  font-size: 20px;
+  color: darkblue;
+  border: 1px solid purple;
+}
+
+.redirect a {
+  text-decoration: none;
+}

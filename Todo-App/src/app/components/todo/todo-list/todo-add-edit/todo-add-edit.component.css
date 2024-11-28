@@ -1,0 +1,36 @@
+.todo-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+mat-card {
+  width: 30%;
+  border-radius: 8px;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;
+}
+
+mat-card-content {
+  margin-top: 20px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+input {
+  color: black;
+}
+
+.success {
+  color: green;
+}

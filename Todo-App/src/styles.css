@@ -1,0 +1,22 @@
+/* styles.css */
+body, h1, h2, h3, h4, h5, h6, p, span, div, /* Add other elements where you want to apply the font */
+.app-root {
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/bg2.jpg"); /* Path to your background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+}
